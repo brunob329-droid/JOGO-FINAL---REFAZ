@@ -1,14 +1,5 @@
 [build]
-builder = "nixpacks"
+buildCommand = "npm install --legacy-peer-deps && cd client && npm install --legacy-peer-deps && cd ../server && npm install --legacy-peer-deps && cd .."
 
-[build.nixpacks]
-# Commands to run for a monorepo setup
-cmds = [
-  "npm install --legacy-peer-deps",
-  "cd client && npm install --legacy-peer-deps",
-  "cd ../server && npm install --legacy-peer-deps",
-  "cd .."
-]
-
-[start]
-cmd = "node server/server.js"
+[deploy]
+startCommand = "node server/server.js"
