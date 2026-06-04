@@ -274,7 +274,7 @@ function Student() {
 
         {/* Dialogue between characters (avatars + messages) */}
         {dilemma.dialogue && dilemma.dialogue.length > 0 && (
-          <div className="dialogue-panel" style={{ ['--dialogue-transition']: `${TRANSITION_MS}ms` }}>
+          <div className="dialogue-panel" style={{ '--dialogue-transition': `${TRANSITION_MS}ms` }}>
             {dilemma.dialogue.map((entry, idx) => {
               const initials = entry.speaker.split(' ').map(n => n[0]).slice(0,2).join('');
               const isVisible = idx < visibleCount;
