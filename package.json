@@ -1,0 +1,33 @@
+{
+  "name": "refaz-dilemas-contabeis",
+  "version": "1.0.0",
+  "description": "Plataforma interativa de dilemas contábeis com avatares profissionais e dinâmica em tempo real",
+  "private": true,
+  "scripts": {
+    "start": "bash start.sh",
+    "start:windows": "start.bat",
+    "dev:backend": "node server/server.js",
+    "dev:frontend": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "build:docker": "docker-compose build",
+    "up": "docker-compose up",
+    "up:build": "docker-compose up --build",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "logs:backend": "docker-compose logs -f backend",
+    "logs:frontend": "docker-compose logs -f frontend",
+    "ps": "docker-compose ps",
+    "install:all": "npm install && cd client && npm install && cd .."
+  },
+  "keywords": [
+    "contabilidade",
+    "educação",
+    "dilemas",
+    "gamificação",
+    "react",
+    "nodejs",
+    "socketio"
+  ],
+  "author": "",
+  "license": "MIT"
+}
