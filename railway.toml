@@ -2,5 +2,13 @@
 builder = "nixpacks"
 
 [build.nixpacks]
-# Install dependencies in both directories
-onlyIncludeFiles = ["package.json", "package-lock.json", "server/", "client/"]
+# Commands to run for a monorepo setup
+cmds = [
+  "npm install --legacy-peer-deps",
+  "cd client && npm install --legacy-peer-deps",
+  "cd ../server && npm install --legacy-peer-deps",
+  "cd .."
+]
+
+[start]
+cmd = "node server/server.js"
