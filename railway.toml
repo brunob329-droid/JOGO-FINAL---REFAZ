@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+
+[build.nixpacks]
+# Install dependencies in both directories
+onlyIncludeFiles = ["package.json", "package-lock.json", "server/", "client/"]
